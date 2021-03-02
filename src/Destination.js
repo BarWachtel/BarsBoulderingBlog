@@ -3,8 +3,8 @@ const Destination = ({destination}) => {
     return <ul key={id}>
         <div>
             <h2>{title}</h2>
-            <img src={imgUrl}/>
-            <h2>{description}</h2>
+            <img src={imgUrl} width={500} height={400}/>
+            <p>{description}</p>
         </div>
     </ul>
 }
