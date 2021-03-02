@@ -14,16 +14,16 @@ const LandingPage = () => {
         setDestinations(response.data.landmarks)
     }
 
-    useEffect(() => {
-        fetchData();
-    }, [destinations])
+    useEffect(async () => {
+        await fetchData();
+    }, [])
 
     return <div>
         <h1>Welcome to Bar's Bouldering Blog!</h1>
         <p>Checkout some of these great bouldering destinations</p>
-        {destinations == null || <h3>Loading...</h3>}
+        {destinations === null && <h3>Loading...</h3>}
 
-        {destinations != null && <Destinations destinations={destinations}/>}
+        {destinations !== null && <Destinations destinations={destinations}/>}
     </div>
 }
 
